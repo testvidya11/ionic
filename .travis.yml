@@ -8,17 +8,15 @@ env:
   - secure: EXFisiY1QVmeXLOQRcZHcY3kJNfUUhBgVfe8492Ion/+djwi/e6bRbuZvU8Axvz26CpdRwS9IWSsZm7J3Eu+g3ORsBqILbJ0hTO4m7UJyt8hZxeRJZEOmQI2S0NcOFkIdSgNbrvxZoF8ZNFrp96kQWR3/5wMYRGcxtu/1JTqVy0=
   - secure: QGukWuP7Li6RDnvxszY/qX/nySshmwiOYQJOKyG0YqAGjV4aFxfdA1pOffqPXEYn2KK6eB5DDx3YjDgtVnBClxV26CUdDhwy0reNKj8UrzgN/NSYeFy6EnOZMDz+DtPJXpUSXnGa3HtaOxbxG8mrpPFSPEeCY6Ci4M119hyslFY=
 
-notifications:
-  hipchat:
-    rooms:
-      secure: mkHfRTsuxidtOOORbJJ0Jspb/DSa8jAiQwWWUljqLwefy1p4HGC9P/rLdXXg3vsjiulCzyjEkfvDWAHXvu34GhGWfQuD8U140Fon1Os3AO5Hbme+yRmjXmTcgH8XetSLQufyBBMqXHMd6o1tkxXql1p54G1IShhgAdPNe76d5ZE=
 
 before_install:
 - npm install -g grunt-cli protractor
 
+
 before_script:
 - export DISPLAY=:99.0
 - sh -e /etc/init.d/xvfb start
+
 
 script:
 - ./scripts/travis/ci.sh
